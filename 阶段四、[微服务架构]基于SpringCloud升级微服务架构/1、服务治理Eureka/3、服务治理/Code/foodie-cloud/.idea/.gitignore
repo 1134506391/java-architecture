@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\StudyCode\java-architecture\阶段四、[微服务架构]基于SpringCloud升级微服务架构\1、服务治理Eureka\3、服务治理\Code\foodie-cloud\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
