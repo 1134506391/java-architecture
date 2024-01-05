@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\StudyCode\java-architecture\阶段一、[单体架构]从架构设计到功能开发与上线\1、架构初知与单体架构设计\第2章、单体架构设计的正确姿势与准备工作\Code\foodie\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

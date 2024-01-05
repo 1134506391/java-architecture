@@ -1,0 +1,79 @@
+# DSL搜索（prefix-fuzzy-wildcard）
+
+## 1、prefix
+
+根据前缀去查询
+
+```
+POST     /shop/_doc/_search
+{
+    "query": {
+        "prefix": {
+            "desc": "imo"
+        }
+    }
+}
+```
+
+## 2、fuzzy
+
+模糊搜索，并不是指的sql的模糊搜索，而是用户在进行搜索的时候的打字错误现象，搜索引整会自动纠正，然后尝试匹配索引库中的数据
+
+```
+POST     /shop/_doc/_search
+{
+  "query": {
+    "fuzzy": {
+      "desc": "imoov.coom"
+    }
+  }
+}
+# 或多字段搜索
+{
+  "query": {
+    "multi_match": {
+      "fields": [ "desc", "nickname"],
+      "query": "imcoc supor",
+      "fuzziness": "AUTO"
+    }
+  }
+}
+
+{
+  "query": {
+    "multi_match": {
+      "fields": [ "desc", "nickname"],
+      "query": "演说",
+      "fuzziness": "1"
+    }
+  }
+}
+```
+
+官网：https://www.elastic.co/guide/cn/elasticsearch/guide/current/fuzzy-match-query.html
+
+## 3、wildcard
+
+占位符查询：
+
+- ?：1个字符
+- *：1个或多个字符
+
+```
+POST     /shop/_doc/_search
+{
+  "query": {
+    "wildcard": {
+      "desc": "*oo?"
+    }
+  }
+}
+{
+	"query": {
+    	"wildcard": {
+    		"desc": "演*"
+    	}
+	}
+}
+```
+

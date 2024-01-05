@@ -1,0 +1,22 @@
+# DSL搜索（高亮显示）
+
+示例如下：
+
+```
+POST     /shop/_doc/_search
+{
+    "query": {
+        "match": {
+            "desc": "慕课网"
+        }
+    },
+    "highlight": {
+        "pre_tags": ["<tag>"],
+        "post_tags": ["</tag>"],
+        "fields": {
+            "desc": {}
+        }
+    }
+}
+```
+

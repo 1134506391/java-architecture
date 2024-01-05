@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\StudyCode\java-architecture\阶段三、[分布式架构]手把手带你逐个击破分布式难题\4、搞定消息中间件RabbitMQ\3、RabbitMQ基础组件封装实战\Code\rabbit-test\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
